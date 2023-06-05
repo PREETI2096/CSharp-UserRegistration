@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Welcome to User Registration Program");
             UserValidation userValidation = new UserValidation();
-            userValidation.ValidateMobileNumber();
+            userValidation.ValidatePassword();
         }
     }
 }

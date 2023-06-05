@@ -42,5 +42,16 @@ namespace UserRegistration
             else
                 Console.WriteLine("invalid email");
         }
+        public void ValidateMobileNumber()
+        {
+            string MobilePattern = @"^(91)[\s][0-9]{10}$";
+            Regex regexObject = new Regex(MobilePattern);
+            Console.WriteLine("enter mobile number : ");
+            string userInput = Console.ReadLine();
+            if (regexObject.IsMatch(userInput))
+                Console.WriteLine("mobile number is valid");
+            else
+                Console.WriteLine("invalid mobile number");
+        }
     }
 }

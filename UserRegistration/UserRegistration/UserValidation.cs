@@ -20,5 +20,16 @@ namespace UserRegistration
             else
                 Console.WriteLine("Invalid FirstName");
         }
+        public void ValidateLastName()
+        {
+            string LastNamePattern = @"^[A-Z][a-z]{2,}$";
+            Regex regexObject = new Regex(LastNamePattern);
+            Console.WriteLine("Enter Last Name:  ");
+            string userInput = Console.ReadLine();
+            if (regexObject.IsMatch(userInput))
+                Console.WriteLine("Last name is valid");
+            else
+                Console.WriteLine("Invalid last name");
+        }
     }
 }

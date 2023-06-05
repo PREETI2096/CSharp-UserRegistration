@@ -31,5 +31,16 @@ namespace UserRegistration
             else
                 Console.WriteLine("Invalid last name");
         }
+        public void ValidateEmail()
+        {
+            string EmailPattern = @"^[a-z]+([_.-]?[a - zA - Z0 - 9])*[@][a - zA - Z0 - 9]+([.][a - z]{2,3}){1,2}$";
+            Regex regexObject = new Regex(EmailPattern);
+            Console.WriteLine("enter email : ");
+            string userInput = Console.ReadLine();
+            if (regexObject.IsMatch(userInput))
+                Console.WriteLine("email is valid");
+            else
+                Console.WriteLine("invalid email");
+        }
     }
 }

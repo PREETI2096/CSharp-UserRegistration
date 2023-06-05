@@ -33,7 +33,7 @@ namespace UserRegistration
         }
         public void ValidateEmail()
         {
-            string EmailPattern = @"^[a-z]+([_.-]?[a - zA - Z0 - 9])*[@][a - zA - Z0 - 9]+([.][a - z]{2,3}){1,2}$";
+            string EmailPattern = @"^[a-z]+([+_.-]?[a-zA-Z0-9])*[@][a-zA-Z0-9]+([.][a-z]{2,3}){1,2}$";
             Regex regexObject = new Regex(EmailPattern);
             Console.WriteLine("enter email : ");
             string userInput = Console.ReadLine();
